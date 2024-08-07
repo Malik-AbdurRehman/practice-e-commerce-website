@@ -108,7 +108,13 @@ const Cart = () => {
                 ${setSingleItemPrice(items.price, items.quantity)}
               </p>
 
-              <button onClick={() => deleteSingleItem(items)}>Delete</button>
+              <button onClick={() => deleteSingleItem(items)}>
+                <img
+                  className="Delete-Dustbin"
+                  src="delete.png"
+                  alt="Del"
+                ></img>
+              </button>
             </div>
           ))}
         </div>

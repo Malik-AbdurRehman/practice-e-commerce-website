@@ -28,22 +28,26 @@ const Products = () => {
           return item;
         }
       });
+      alert("item Added to the Cart");
       setCart(updatedCart);
     } else {
       setCart([...cart, { ...obj, quantity: 1 }]);
+      alert("Item Added to the Cart");
     }
   };
   return (
     <>
-      <div className="container">
+      <div className="products_container">
         {record.map((items, index) => (
           <div className="tiles" key={index}>
             <Link to={`/products/${items.id}`}>
               <img src={items.thumbnail} alt="pics"></img>
-              <h3>{items.title}</h3>
-              <p>${items.price}</p>
+              <h3 className="item-name">{items.title}</h3>
+              <p className="item-price">${items.price}</p>
             </Link>
-            <button onClick={() => AddtoCart(items)}>Add to cart</button>
+            <button className="add-to-cart" onClick={() => AddtoCart(items)}>
+              Add to cart
+            </button>
           </div>
         ))}
       </div>

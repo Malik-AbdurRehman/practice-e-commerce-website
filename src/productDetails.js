@@ -25,32 +25,52 @@ const ProductDetails = () => {
           return item;
         }
       });
+      alert("Item Added to the Cart");
       setCart(updatedCart);
     } else {
       setCart([...cart, { ...obj, quantity: 1 }]);
+      alert("Item Added to the Cart");
     }
   };
   console.log(cart);
 
   return (
     <>
-      <p>{item ? item.title : "loading"}</p>
       <div className="Full">
         <div>
           <img className="descriptionImage" src={item.images} alt="img"></img>
         </div>
-        <div>
-          <p>Name:{item.title}</p>
-          <p>Brand:{item.brand}</p>
-          <p>Category:{item.category}</p>
-          <p>Description:{item.description}</p>
-          <p>Price:{item.price}</p>
-          <p>
-            Rating:{item.rating}
-            <br></br>
-          </p>
-          <button>-</button>1<button>+</button>
-          <button onClick={() => AddtoCart(item)}>Add to cart</button>
+        <div className="product-desc">
+          <div className="details-div1">
+            <h1>Name:</h1>
+            <p>{item.title}</p>
+          </div>
+          <div className="details-div2">
+            <h1>Brand:</h1>
+            <p>{item.brand}</p>
+          </div>
+          <div className="details-div2">
+            <h1>Category:</h1>
+            <p>{item.category}</p>
+          </div>
+          <div className="details-div2">
+            <h1>Description:</h1>
+            <p>{item.description}</p>
+          </div>
+          <div className="details-div1">
+            <h1>Price:</h1>
+            <p>${item.price}</p>
+          </div>
+          <div className="details-div1">
+            <h1>Rating:</h1>
+            <p>
+              {item.rating}
+              <br></br>
+            </p>
+          </div>
+          <button className="details-ATC" onClick={() => AddtoCart(item)}>
+            Add to cart
+          </button>
           <br></br>
         </div>
       </div>

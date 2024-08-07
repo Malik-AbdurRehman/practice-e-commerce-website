@@ -6,12 +6,14 @@ const Navbar = () => {
       <div className="NavContainer">
         <p>E-Commerce Store</p>
         <div className="NavTiles">
-          <Link to="/">Home</Link>
+          <Link className="NavOption" to="/">
+            Home
+          </Link>
           <Link className="NavOption" to="products">
             Products
           </Link>
-          <Link className="NavOption" to="cart">
-            Go to cart
+          <Link className="NavOption-cart" to="cart">
+            <img src="./cart-icon.png" alt="cart"></img>
           </Link>
         </div>
       </div>
