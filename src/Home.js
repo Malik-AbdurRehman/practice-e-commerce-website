@@ -3,6 +3,7 @@ const Home = () => {
     <>
       <div>
         <p className="underConstruction">Under Construction :)</p>
+        <p>Hello</p>
       </div>
     </>
   );

@@ -12,6 +12,12 @@ const Navbar = () => {
           <Link className="NavOption" to="products">
             Products
           </Link>
+          <div className="NavOption">
+            <div className="category">
+              <button>Categories</button>
+              <p>&#x1F893;</p>
+            </div>
+          </div>
           <Link className="NavOption-cart" to="cart">
             <img src="./cart-icon.png" alt="cart"></img>
           </Link>

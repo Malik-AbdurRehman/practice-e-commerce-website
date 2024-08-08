@@ -8,13 +8,14 @@ body{
     flex-wrap: wrap;
     margin: 10px 10px 10px 10px;
     justify-content: center;
+    width: 95%;
 }
 .tiles{
         background-color: rgb(228, 209, 170);
         border-radius: 15px;
         box-shadow: 0 10px 30px -15px rgb(0, 0, 0, .2);
         margin: 60px 20px 0px 20px;
-        width: 310px;
+        width: 22%;
         height: 420px;
         padding: 5px;
         text-decoration: none;
@@ -50,8 +51,10 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
+    padding: 10px 0px 10px 0px;
 
-    padding: 10px 85px 10px 85px;
+    
     border-radius: 20px;
     background-color: rgb(238, 182, 78);
     box-shadow: 0 10px 30px -15px rgb(0, 0, 0, .2);
@@ -129,17 +132,19 @@ body{
 }
 .NavTiles{
     padding: 13px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .NavOption{
-    padding-left: 25px;
+    padding-right: 25px;
     font-size: large;
     font-weight: 600;
 }
 .NavOption-cart{
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    padding-left: 45px;
+    height: 35px;
+    width: 35px;
+
 }
 .Cart{
     display: flex;
@@ -165,6 +170,7 @@ body{
     margin : 5px 0px 10px 0px;
     padding: 15px 15px 15px 15px;
     align-items: center;
+    width: 100%;
 }
 .CartItemTiles:hover{
     box-shadow: 0 10px 30px -15px rgb(0, 0, 0, .4);
@@ -245,4 +251,55 @@ body{
     display: flex;
     justify-content: center;
     font-size: 50px;
+}
+@media screen  and (max-width:1420px){
+    .tiles{
+        width: 30%;
+    }
+}
+@media screen and (max-width:1267px) {
+    .tiles{
+        width:45%;
+    }
+    .Full{
+        flex-direction: column;
+    }
+    .descriptionImage{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .details-ATC{
+        height: 40px;
+    }
+}
+@media screen and (max-width:980px) {
+    .tiles{
+        width: 40%;
+    }
+    .Cart{
+        flex-direction: column;
+    }
+    .CartTotal{
+        width: 80%;
+    }
+    .CartItemTiles{
+        width: 80%;
+    }
+}
+@media screen and (max-width:680px) {
+    .tiles{
+        width:80%;
+    }
+    .NavTiles{
+        display: none;
+    }
+}
+.category{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.category p{
+    font-size: 30px;
+    transform-origin: 50px 50px;
 }

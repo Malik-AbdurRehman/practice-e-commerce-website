@@ -37,6 +37,7 @@ const Cart = () => {
 
   const clearCart = () => {
     setCart([]);
+    alert("Cleraing Cart ......");
     console.log(cart);
   };
 
@@ -84,6 +85,7 @@ const Cart = () => {
         return item;
       }
     });
+    alert("Deleting Item from the cart");
     setCart(tempArray);
   };
 
